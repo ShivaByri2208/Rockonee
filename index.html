@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockOne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#F7F7F7",
+              aqua: "#001F3F",
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      function toggleNav() {
+        document.getElementById("nav-links").classList.toggle("hidden");
+      }
+    </script>
+    <style>
+      /* Slow-motion pop-up effect for all hoverable elements */
+      *:hover {
+        transition: all 0.6s ease-in-out; /* Longer duration for slow motion */
+      }
+      /* Specifically for elements that scale */
+      .scale-hover:hover {
+        transform: scale(1.1); /* Slight scaling to simulate a "pop" effect */
+      }
+    </style>
+  </head>
+  <body class="bg-navy text-001F3F">
+    <header
+      class="fixed top-0 left-0 w-full bg-navy shadow-lg z-50 p-4 border-b border-gray-700"
+    >
+      <nav class="container mx-auto flex justify-between items-center">
+        <div class="text-5xl font-bold text-aqua">
+          <a href="index.html">RockOne</a>
+        </div>
+        <ul id="nav-links" class="hidden md:flex space-x-6 text-lg ml-auto">
+          <li><a href="#home" class="hover:text-aqua">Home</a></li>
+          <li><a href="#properties" class="hover:text-aqua">Properties</a></li>
+          <li><a href="#features" class="hover:text-aqua">Features</a></li>
+          <li><a href="#contact" class="hover:text-aqua">Contact</a></li>
+        </ul>
+        <button class="md:hidden text-aqua ml-4" onclick="toggleNav()">
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center shadow-xl rounded-lg m-6 p-6"
+      style="background-image: url('bg.jpg')"
+    >
+      <h1 class="text-5xl text-white font-extrabold drop-shadow-lg">
+        Find Your Dream Home
+      </h1>
+      <p class="text-xl text-white mt-3">
+        Discover luxury living at its finest
+      </p>
+      <a
+        href="brochure.pdf"
+        class="mt-5 px-6 py-3 bg-aqua text-navy text-lg font-bold rounded-lg shadow-md hover:bg-blue-500 scale-hover"
+        >Get Brochure</a
+      >
+    </section>
+
+    <section id="properties" class="py-16 bg-navy border-t border-gray-700">
+      <h2 class="text-4xl text-center font-bold mb-10">Featured Properties</h2>
+      <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 transition transform hover:scale-110 hover:shadow-2xl hover:border-aqua cursor-pointer scale-hover text-white"
+          onclick="location.href='property1.html';"
+        >
+          <img src="1.jpg" alt="Property 1" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Aura</h3>
+          <p>Spacious and elegant 2BHK luxury apartments.</p>
+        </div>
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 transition transform hover:scale-110 hover:shadow-2xl hover:border-aqua cursor-pointer scale-hover text-white"
+          onclick="location.href='property2.html';"
+        >
+          <img src="2.jpg" alt="Property 2" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Premiere</h3>
+          <p>2BHK luxury apartment in the heart of the Khammam.</p>
+        </div>
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 transition transform hover:scale-110 hover:shadow-2xl hover:border-aqua cursor-pointer scale-hover text-white"
+          onclick="location.href='property3.html';"
+        >
+          <img src="3.jpg" alt="Property 3" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold">Flora</h3>
+          <p>
+            Flora is a blend of residential is poised to make life easier for
+            you. </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-16 bg-navy border-t border-gray-700">
+      <h2 class="text-4xl text-center font-bold mb-10">Premium Features</h2>
+      <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 text-center scale-hover text-white"
+        >
+          <i class="bi bi-shield-lock text-white text-3xl mb-3"></i><br />
+          <h3 class="text-xl font-semibold">24/7 Security</h3>
+          <p>Round-the-clock security with CCTV surveillance</p>
+        </div>
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 text-center scale-hover text-white"
+        >
+          <i class="bi bi-building text-white text-3xl mb-3"></i><br />
+          <h3 class="text-xl font-semibold">Elevator</h3>
+          <p>Elevator facility for easy access</p>
+        </div>
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 text-center scale-hover text-white"
+        >
+          <i class="bi bi-bus-front text-white text-3xl mb-3"></i><br />
+          <h3 class="text-xl font-semibold">Nearby Transport</h3>
+          <p>Easy access to public transport</p>
+        </div>
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700 text-center scale-hover text-white"
+        >
+          <i class="bi bi-tree text-white text-3xl mb-3"></i><br />
+          <h3 class="text-xl font-semibold">Garden Area</h3>
+          <p>Landscaped gardens with walking trails</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h6 class="font-semibold text-lg mb-2">
+              <i class="bi bi-headset"></i> Office
+            </h6>
+            <p>Sree Vihar Apartments</p>
+            <p>Opp. Hyderabad Presidence degree and PG college</p>
+            <p>Golden temple road, Manikonda,</p>
+            <p>Hyderabad - 500089</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">
+              <i class="bi bi-geo-fill"></i> Contact Info
+            </h6>
+            <p><strong>Phone:</strong> 7207002549</p>
+            <p><strong>Email:</strong> rockoneestatespvtltd@gmail.com</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">
+              <i class="bi bi-calendar-date"></i> Business Hours
+            </h6>
+            <p><strong>Mon-Sat : </strong> 9AM - 8PM</p>
+            <p><strong>Sunday : </strong> 9AM - 2PM</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">
+              <i class="bi bi-link-45deg"></i> Follow Us
+            </h6>
+            <div class="flex space-x-4">
+              <a
+                href="https://youtube.com/@khammamflatsforsalemotinag777?si=sA5I5ksVTNwYXsly"
+                class="text-white text-xl"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/1YM16v4bh8/"
+                class="text-white text-xl"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/rockone_estates?igsh=MXZyMm5hZ3BhbDBp"
+                class="text-white text-xl"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="text-center mt-6 text-sm">
+          <p>Designed by <a href="#" class="text-blue-400">Rockone</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+  </body>
+</html>

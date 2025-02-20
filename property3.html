@@ -1,0 +1,118 @@
+<!-- property1.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockOne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#F7F7F7",
+              aqua: "#001F3F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-navy text-001F3F">
+    <header
+      class="text-aqua top-0 left-0 w-full bg-navy shadow-lg z-50 p-4 border-b border-gray-700"
+    >
+      <nav class="container mx-auto flex justify-between items-center">
+        <div class="text-5xl font-bold text-aqua">
+          <a href="index.html">RockOne</a>
+        </div>
+        <ul id="nav-links" class="hidden md:flex space-x-6 text-lg ml-auto">
+          <li><a href="#home" class="hover:text-aqua">Home</a></li>
+          <li><a href="#properties" class="hover:text-aqua">Properties</a></li>
+          <li><a href="#features" class="hover:text-aqua">Features</a></li>
+          <li><a href="#contact" class="hover:text-aqua">Contact</a></li>
+        </ul>
+        <button class="md:hidden text-aqua ml-4" onclick="toggleNav()">
+          ☰
+        </button>
+      </nav>
+    </header>
+    <div class="container mx-auto p-6 pt-40 grid md:grid-cols-2 gap-6">
+      <!-- Image Section -->
+      <img
+        src="flora.jpg"
+        alt="Luxury Villa"
+        class="w-full rounded-lg shadow-lg"
+      />
+
+      <!-- Info Section with Vertical Centering -->
+      <div class="flex flex-col justify-center items-center text-center">
+        <h1 class="text-3xl font-bold text-aqua">Flora</h1>
+        <p class="mt-2">
+          Flora is a blend of residential is poised to make life easier for you.
+        </p>
+
+        <!-- Google Maps Iframe with Border Radius and Adjusted Size -->
+        <div class="mt-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d476.11490467521594!2d78.59467085591862!3d17.319468193756784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDE5JzEwLjciTiA3OMKwMzUnNDEuOSJF!5e0!3m2!1sen!2sin!4v1739691916956!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 12px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-6 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h6 class="font-semibold text-lg mb-2">Office</h6>
+            <p>Sree Vihar Apartments</p>
+            <p>Opp. Hyderabad Presidence degree and PG college</p>
+            <p>Golden temple road, Manikonda,</p>
+            <p>Hyderabad - 500089</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">Contact Info</h6>
+            <p><strong>Phone:</strong> 7207002549</p>
+            <p><strong>Email:</strong> rockoneestatespvtltd@gmail.com</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">Business Hours</h6>
+            <p><strong>Mon-Sat:</strong> 9AM - 8PM</p>
+            <p><strong>Sunday:</strong> 9AM - 2PM</p>
+          </div>
+          <div>
+            <h6 class="font-semibold text-lg mb-2">Follow Us</h6>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white text-xl"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a href="#" class="text-white text-xl"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white text-xl"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-white text-xl"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="text-white text-xl"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-6 text-sm">
+          <p>Designed by <a href="#" class="text-blue-400">Rockone</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+  </body>
+</html>
